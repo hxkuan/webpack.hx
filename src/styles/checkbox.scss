@@ -1,0 +1,66 @@
+/*.radio-container {
+  //@include clear-fix;
+  input[type="radio"] {
+    display: none;
+    &:checked + label::before {
+      background-image: url("../images/radio-select.png");
+    }
+  }
+  label + input + label {
+    margin-left: 18px;
+  }
+  label {
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    min-width: 80px;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 32px;
+      float: left;
+      margin-right: 10px;
+      background: url("../images/radio-unselect.png") no-repeat center;
+    }
+  }
+}*/
+
+$checkbox-font-size:0.13rem;
+$checkbox-img-size:$checkbox-font-size;
+$checkbox-height:$checkbox-font-size+0.2rem;
+$checkbox-width:$checkbox-font-size+0.01rem;
+.checkbox-container {
+
+  input[type="checkbox"] {
+    display: none;
+    &:checked + label::before {
+      background-image: url("../images/checkbox-select.png");
+      background-size: $checkbox-img-size $checkbox-img-size;
+    }
+  }
+  label {
+    margin-top: 0;
+    color: #333;
+    font-size: $checkbox-font-size;
+    cursor: pointer;
+    position: relative;
+    line-height: $checkbox-height;
+    text-align: left;
+    min-width: 0.8rem;
+    &::before {
+      content: '';
+      display: inline-block;
+      width:  $checkbox-width ;
+      height: $checkbox-height;
+      float: left;
+      margin-right: 0.05rem;
+      background: url("../images/checkbox-unselect.png") no-repeat center;
+      background-size: $checkbox-img-size $checkbox-img-size;
+    }
+  }
+}
+
+
+

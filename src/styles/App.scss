@@ -1,0 +1,363 @@
+$main-color: #07aab2;
+
+$login-height: 0.4rem;
+
+$list-title-font-size: 0.18rem;
+$list-title-color: #030303;
+$list-hint-font-size: 0.14rem;
+$list-item-height: 0.42rem;
+$list-size-lr: 0.15rem;
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "微软雅黑";
+}
+
+#app {
+  height: 100%;
+}
+
+.list-part {
+  margin-top: 0.15rem;
+}
+
+
+.list-view {
+  background-color: #FFFFFF;
+  padding-left:$list-size-lr ;
+}
+
+.list-item {
+  height: $list-item-height;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
+  padding-right: $list-size-lr;
+
+  span {
+    float: left;
+    height: $list-item-height;
+    line-height: $list-item-height;
+    font-size: $list-title-font-size;
+    text-align: center;
+    color: $list-title-color;
+    vertical-align: middle;
+
+  }
+
+  div {
+    width: auto;
+    margin-left: 0.85rem;
+
+    //padding-left: 0.8rem;
+
+
+
+    input {
+      height: $list-item-height;
+      width: 100%;
+      padding: 0.05rem 0;
+      -webkit-user-select: text;
+      border: 0;
+      outline: 0;
+      background-color: #fff;
+      -webkit-appearance: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      font-size: $list-hint-font-size;
+      color: $list-title-color;
+    }
+
+    input::-webkit-input-placeholder {font-size: $list-hint-font-size;}
+    input::-moz-placeholder {font-size: $list-hint-font-size;}
+    /*!* firefox 19+ *!*/
+    input:-ms-input-placeholder {font-size: $list-hint-font-size;}
+    /*!* ie *!*/
+    input:-moz-placeholder {font-size: $list-hint-font-size;}
+
+
+    .cue {
+      font-size: $list-hint-font-size;
+      //float: right;
+      margin-right: 0.25rem;
+      vertical-align: middle;
+      text-align: right;
+      width: 100%;
+
+      padding-right: 0.15rem;
+      white-space:nowrap;
+      text-overflow:ellipsis;
+      -o-text-overflow:ellipsis;
+      overflow: hidden;
+    }
+
+    .cue-hint {
+      @extend .cue;
+      color: #999999;
+    }
+
+
+    .cue-has {
+      @extend .cue;
+      color: #333333;
+    }
+  }
+
+}
+
+
+
+
+
+.list-line {
+  height: 1px;
+  background-color: #F5F5F5;
+  width: auto;
+
+  -moz-box-sizing: border-box; /*Firefox3.5+*/
+  -webkit-box-sizing: border-box; /*Safari3.2+*/
+  -o-box-sizing: border-box; /*Opera9.6*/
+  -ms-box-sizing: border-box; /*IE8*/
+  box-sizing: border-box;
+}
+
+.main-button-view {
+  width: 100%;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+}
+
+.main-button {
+  background-color: $main-color;
+  font-size: 0.16rem;
+  margin-top: 0.3rem;
+  width: 100%;
+  height: $list-item-height;
+  color: #ffffff;
+  font-size: 0.18rem;
+}
+
+.main-cue {
+  padding: 0.02rem;
+  margin: 0;
+  margin-bottom: 0.02rem;
+  height: 0.16rem;
+  line-height: 0.16rem;
+  width: 100%;
+  color: #FF0000;
+  font-size: 0.1rem;
+  text-align: center;
+}
+
+.login-contain {
+  width: 100%;
+  height: 100%;
+  //background-color: #8a6de9;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-size: cover;
+
+}
+
+.login-view {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  padding-right: 0.52rem;
+  padding-left: 0.52rem;
+  padding-bottom: 0.3rem;
+  width: 100%;
+
+  top: 50%;
+  position: absolute;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%); /* Safari 和 Chrome */
+}
+
+.login-view-title {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  color: #FFFFFF;
+  font-size: 0.24rem;
+  width: 100%;
+}
+
+.login-view .cue {
+  padding: 0.02rem;
+  padding-left: 0.35rem;
+  margin: 0;
+  margin-bottom: 0.02rem;
+  height: 0.16rem;
+  line-height: 0.16rem;
+  width: 100%;
+  color: #FF0000;
+  font-size: 0.1rem;
+}
+
+.login-input-view {
+  width: 100%;
+  border: 1px #ffffff solid;
+  border-radius: 0.02rem;
+
+  padding-left: 0.1rem;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-origin: content-box;
+}
+
+
+.login-input-view input {
+  //line-height: $login-height;
+  height: $login-height;
+  width: 1.65rem;
+  padding: 0.05rem;
+  -webkit-user-select: text;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  font-size: $list-hint-font-size;
+  color: $list-title-color;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+
+.login-input-view input::-webkit-input-placeholder {
+  font-size: $list-hint-font-size;
+  color: #ffffff;
+}
+
+.login-input-view input::-moz-placeholder {
+  font-size: $list-hint-font-size;
+  color: #ffffff;
+}
+
+
+.login-input-view input:-ms-input-placeholder {
+  font-size: $list-hint-font-size;
+  color: #ffffff;
+}
+
+
+.login-input-view input:-moz-placeholder {
+  font-size: $list-hint-font-size;
+  color: #ffffff;
+}
+
+.login-input-view input:-webkit-autofill{
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  color: rgb(0, 0, 0);
+}
+
+.login-button {
+  width: 100%;
+  color: $main-color;
+  background-color: #ffffff;
+  height: $login-height;
+  margin-top: 0.1rem;
+  font-size: 0.16rem;
+}
+
+.result-contain {
+  width: 100%;
+  height: 100%;
+
+}
+
+.result-view {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0.3rem;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  width: 100%;
+
+  top: 50%;
+  position: absolute;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%); /* Safari 和 Chrome */
+
+  .title {
+    color: #000000;
+    font-size: 0.2rem;
+    height: 0.35rem;
+    line-height: 0.35rem;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-origin: content-box;
+    background-size: 0.3rem;
+    margin-bottom: 0.1rem;
+
+    span {
+      margin-left: 0.4rem;
+    }
+  }
+
+  p {
+    width: 100%;
+    margin-top: 0.12rem;
+    margin-bottom: 0;
+    font-size: 0.16rem;
+    color: #333333;
+
+    span:nth-child(1) {
+
+      text-align: right;
+      display: inline-block;
+      width: 36%;
+      margin-right: 3%;
+      vertical-align: top;
+    }
+
+    span:nth-child(2) {
+      line-height: 0.20rem;
+      display: inline-block;
+      width: 60%;
+
+    }
+  }
+
+  .result-rember {
+    margin-top: 0.3rem;
+    label {
+      color: #333333;
+      font-size: 0.12rem;
+    }
+  }
+}
+
+.result-button {
+  margin-top: 0.12rem;
+  background-color: $main-color;
+  height: 0.44rem;
+  width: 1.4rem;
+  color: #ffffff;
+  font-size: 0.16rem;
+
+}
+
+.result-checkbox{
+  margin-right: 0.05rem;
+  vertical-align: middle;
+  background-color: $main-color;
+}
+
+
+
