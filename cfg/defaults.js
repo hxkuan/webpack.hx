@@ -11,6 +11,7 @@ const srcPath = path.join(__dirname, '/../src');
 const dfltPort = 8000;
 
 const args = require('minimist')(process.argv.slice(2));
+const bconfig=require('../src/build_config.js');
 
 /**
  * Get the default modules object for webpack
@@ -57,10 +58,15 @@ function getDefaultModules() {
     ]
   };
 }
-let dev_entry=args.pro?'./src/'+args.pro+'/index':'./src/index';
-let dist_entry=args.pro?'../src/'+args.pro+'/index':'../src/index';
-let output=args.pro?'/../dist/'+args.pro+'/assets':'/../dist/assets';
-let contentBase=args.pro?'./src/'+args.pro:'./src';
+// let dev_entry=args.pro?'./src/'+args.pro+'/index':'./src/index';
+// let dist_entry=args.pro?'../src/'+args.pro+'/index':'../src/index';
+// let output=args.pro?'/../dist/'+args.pro+'/assets':'/../dist/assets';
+// let contentBase=args.pro?'./src/'+args.pro:'./src';
+
+ let dev_entry=(args.pro &&'./src/'+args.pro+'/index')||(bconfig.default_project &&'./src/'+bconfig.default_project+'/index')||'./src/index';
+ let dist_entry=(args.pro &&'../src/'+args.pro+'/index')||(bconfig.default_project &&'../src/'+bconfig.default_project+'/index')||'../src/index';
+ let output=(args.pro &&'/../dist/'+args.pro+'/assets')||(bconfig.default_project &&'/../dist/'+bconfig.default_project+'/assets')||'/../dist/assets';
+ let contentBase=(args.pro &&'./src/'+args.pro)||(bconfig.default_project &&'./src/'+bconfig.default_project)||'./src';
 
 module.exports = {
   srcPath: srcPath,
@@ -76,5 +82,5 @@ module.exports = {
   dev_entry:dev_entry,
   dist_entry:dist_entry,
   output:output,
-  contentBase:contentBase,//webpack-dev-server的根目录
+  contentBase:contentBase,// webpack-dev-server的根目录
 };
