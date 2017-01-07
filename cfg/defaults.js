@@ -57,6 +57,9 @@ function getDefaultModules() {
     ]
   };
 }
+let dev_entry=args.pro?'./src/'+args.pro+'/index':'./src/index';
+let dist_entry=args.pro?'../src/'+args.pro+'/index':'../src/index';
+let output=args.pro?'/../dist/'+args.pro+'/assets':'/../dist/assets';
 
 module.exports = {
   srcPath: srcPath,
@@ -68,5 +71,8 @@ module.exports = {
   // releasePublic:'http://192.168.5.23:8081/hunterplan/dist/assets/',
   // releasePublic:'http://daily.a.caibaopay.com/hunterplan/dist/assets/',
   releasePublic:'./assets/',
-  processArgs:args
+  processArgs:args,
+  dev_entry:dev_entry,
+  dist_entry:dist_entry,
+  output:output,
 };

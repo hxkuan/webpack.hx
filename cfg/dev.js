@@ -7,12 +7,11 @@ let defaultSettings = require('./defaults');
 
 // Add needed plugins here
 let BowerWebpackPlugin = require('bower-webpack-plugin');
-let enf=defaultSettings.processArgs.pro?'./src/'+defaultSettings.processArgs.pro+'/index':'./src/index';
 let config = Object.assign({}, baseConfig, {
   entry: [
     'webpack-dev-server/client?http://127.0.0.1:' + defaultSettings.port,
     'webpack/hot/only-dev-server',
-    enf
+    defaultSettings.dev_entry
   ],
   output: {
     path: path.join(__dirname, '/../dist/assets'),

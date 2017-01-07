@@ -10,9 +10,9 @@ let defaultSettings = require('./defaults');
 let BowerWebpackPlugin = require('bower-webpack-plugin');
 
 let config = Object.assign({}, baseConfig, {
-  entry: path.join(__dirname, '../src/index'),
+  entry: path.join(__dirname, defaultSettings.dist_entry),
   output: {
-    path: path.join(__dirname, '/../dist/assets'),
+    path: path.join(__dirname, defaultSettings.output),
     filename: 'app.js',
     publicPath: defaultSettings.releasePublic//设置添加目录，即所有资源的绝度路径为：path+publicPath+资源名
   },
