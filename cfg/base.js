@@ -15,7 +15,7 @@ module.exports = {
     publicPath: defaultSettings.publicPath//设置添加目录，即所有资源的绝度路径为：path+publicPath+资源名
   },*/
   devServer: {
-    contentBase: './src',
+    contentBase: defaultSettings.contentBase,
     historyApiFallback: true,
     hot: true,
     port: defaultSettings.port,

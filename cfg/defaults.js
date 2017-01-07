@@ -60,6 +60,7 @@ function getDefaultModules() {
 let dev_entry=args.pro?'./src/'+args.pro+'/index':'./src/index';
 let dist_entry=args.pro?'../src/'+args.pro+'/index':'../src/index';
 let output=args.pro?'/../dist/'+args.pro+'/assets':'/../dist/assets';
+let contentBase=args.pro?'./src/'+args.pro:'./src';
 
 module.exports = {
   srcPath: srcPath,
@@ -75,4 +76,5 @@ module.exports = {
   dev_entry:dev_entry,
   dist_entry:dist_entry,
   output:output,
+  contentBase:contentBase,//webpack-dev-server的根目录
 };
