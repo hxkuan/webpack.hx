@@ -1,5 +1,7 @@
 'use strict';
-
+/**
+ * 打多文件（未测试完成）
+ */
 let path = require('path');
 let webpack = require('webpack');
 

@@ -7,3 +7,6 @@ npm run serve:dist
 
 # Just build the dist version and copy static files
 npm run dist
+
+# projectName Start for development
+node server.js --env=dev --pro=projectName

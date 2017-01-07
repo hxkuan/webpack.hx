@@ -2,10 +2,10 @@
 // import ReactDOM from 'react-dom'
 import {Router, Route, hashHistory} from 'react-router'
 
-import Login from './hunterplan/page/login'
-import MainPage from './hunterplan/page/main-page'
-import ResultPage from './hunterplan/page/result-page'
-require('styles/App.scss');
+import Login from './page/login'
+import MainPage from './page/main-page'
+import ResultPage from './page/result-page'
+require('./styles/App.scss');
 
 
 ReactDOM.render(

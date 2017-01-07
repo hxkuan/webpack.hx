@@ -1,5 +1,5 @@
 //import React from 'react'
-// require('styles/App.scss');
+// require('../styles/App.scss');
 
 let list_down=require('../images/list_down.png');
 let list_right=require('../images/list_right.png');
