@@ -15,7 +15,7 @@ if (args.env) {
   env = 'dev';
 }
 
-console.log(args);
+console.log('hxk',args);
 
 process.env.REACT_WEBPACK_ENV = env;
 
