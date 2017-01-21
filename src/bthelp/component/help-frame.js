@@ -28,7 +28,7 @@ export default class Frame extends React.Component {
         backgroundColor: '#FFF'
       },
       'title': {
-        height: '0.3rem',
+        height: '0.36rem',
         position: 'relative',
         paddingLeft: '0.28rem',
       },
@@ -52,8 +52,8 @@ export default class Frame extends React.Component {
       <div style={style.body}>
         <div style={style.title}>
           <img src={icon}
-               style={{position: 'absolute', left: left, top: '0.07rem',width:'0.16rem'}}/>
-          <span style={{position: 'absolute',lineHeight: '0.3rem', fontSize: '0.11rem', fontWeight: '900',left: left+0.3}}>{title}</span>
+               style={{position: 'absolute', left: left, top: '0.08rem',width:'0.20rem'}}/>
+          <span style={{position: 'absolute',lineHeight: '0.36rem', fontSize: '0.18rem', fontWeight: '900',left: '0.32rem'}}>{title}</span>
         </div>
         <div style={style.line}/>
         <div>
