@@ -76,8 +76,8 @@ module.exports = {
   //发布时将编译后的js文件中的加载资源（如图片..）地址设为绝对地址，否者html 和js分开放置时，引用资源位置出错
   //分本地调试 和 OSS（线上调试，发布）
   // releasePublic:'http://192.168.5.23:8081/hunterplan/dist/assets/',
-  // releasePublic:'http://daily.a.caibaopay.com/hunterplan/dist/assets/',
-  releasePublic:'./assets/',
+  releasePublic:'http://a.caibaopay.com/hunterplan/assets/',
+  // releasePublic:'./assets/',
   processArgs:args,
   dev_entry:dev_entry,
   dist_entry:dist_entry,
