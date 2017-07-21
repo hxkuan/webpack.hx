@@ -6,7 +6,7 @@ export default class Require{
   }
 
   static createMerchant(paramdate,funcs){
-    this.httpRequire(root_domain+'gatewayPc.htm?command=merchant_center_create_merchant','POST',paramdate,funcs);
+    this.httpRequire(root_domain+'gatewayWeb.htm?command=h5_create_merchant','POST',paramdate,funcs);
   }
 
   static httpRequire(url,method,p_data,funcs){
