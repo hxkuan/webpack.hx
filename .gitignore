@@ -31,3 +31,6 @@ bower_components/
 
 .idea/
 dist/
+
+package-lock.json
+yarn.lock
